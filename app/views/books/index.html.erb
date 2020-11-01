@@ -1,15 +1,22 @@
+<!-- Books 部分 -->
 <h1>Books</h1>
-<% @books.each do |book| %>
-  <p>Title</p>
-  <span><%= book.title %></span>
-<% end %>
-<% @books.each do |book| %>
-  <p>Body</p>
-  <span><%= book.body %></span>
-<% end %>
-<!-- form_with部分 -->
-<%= form_with model: @book, url:'/books', local:true do |f| %>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Body</th>
+        <th colspan="3"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- ループ処理 -->
+      <% @books.each do |book| %>
+      <td></td>
+    </tbody>
+  </table>
   <h2>New book</h2>
+<!-- New book 部分 -->
+<%= form_with model: @book, url:'/books', local:true do |f| %>
   <h3>Title</h3>
   <%= f.text_field :title %>
   <h3>Body</h3>
