@@ -26,13 +26,15 @@
 <!-- New book 部分 -->
 <%= form_with model: @book, local:true do |f| %>
   <%= render 'layouts/error_messages', model: f.object %>
-  <div class="field">
-    <%= f.label :title %>
-    <%= f.text_field :title %>
-  </div>
-  <div class="field">
-  <%= f.label :body %>
-  <%= f.text_area :body %></div>
-  <div class="actions"><%= f.submit 'Create Book' %>
-  </div>
+    <div class="field">
+      <%= f.label :title %>
+      <%= f.text_field :title %>
+    </div>
+    <div class="field">
+      <%= f.label :body %>
+      <%= f.text_area :body %>
+    </div>
+    <div class="actions">
+      <%= f.submit 'Create Book' %>
+    </div>
 <% end %>
